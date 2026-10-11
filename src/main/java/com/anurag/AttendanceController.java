@@ -67,4 +67,9 @@ public class AttendanceController {
 
         return attendanceRepository.findByDate(date);
     }
+        // Delete attendance by record ID
+    @DeleteMapping("/{id}")
+    public void deleteAttendance(@PathVariable String id) {
+        attendanceRepository.deleteById(id);
+    }
 }
