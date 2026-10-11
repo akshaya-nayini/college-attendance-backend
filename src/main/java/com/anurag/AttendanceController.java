@@ -1,3 +1,4 @@
+
 package com.anurag.backend;
 
 import org.springframework.web.bind.annotation.*;
@@ -6,7 +7,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/attendance")
-@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174"})
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://college-attendance-frontend-two.vercel.app"
+})
 public class AttendanceController {
 
     private final AttendanceRepository attendanceRepository;
